@@ -22,7 +22,7 @@ print(f"✅ Scaler has been saved as {scaler_path} and can be used for subsequen
 
 new_df = pd.read_excel(file_path, sheet_name='New_Data')
 
-# 归一化新数据
+# Normalize new data
 new_df_normalized = new_df.copy()
 new_df_normalized[columns_to_normalize] = scaler.transform(new_df[columns_to_normalize])
 print("✅ New data normalization complete!")
