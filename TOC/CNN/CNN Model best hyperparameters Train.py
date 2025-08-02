@@ -66,7 +66,6 @@ for conv_filters in conv_filters_list:
                     train_loader = DataLoader(train_subset, batch_size=32, shuffle=True)
                     val_loader = DataLoader(val_subset, batch_size=32, shuffle=False)
 
-
                     model = CNNRegression(input_size=X.size(1), conv_filters=conv_filters,
                                           kernel_size=kernel_size, num_conv_layers=num_conv_layers, output_size=1).to(
                         device)
@@ -123,7 +122,6 @@ best_model = CNNRegression(input_size=X.size(1), conv_filters=best_params['conv_
                            output_size=1).to(device)
 optimizer = optim.Adam(best_model.parameters(), lr=best_params['learning_rate'])
 train_loader = DataLoader(dataset, batch_size=32, shuffle=True)
-
 
 best_model.train()
 for epoch in range(50):
