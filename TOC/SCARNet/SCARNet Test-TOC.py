@@ -31,7 +31,8 @@ models = {
     "Train Best": "best_train_model-TOC.pth",
     "Test Best": "best_test_model-TOC.pth",
     "Overall Best": "best_overall_model-TOC.pth",
-    "Supervised Best": "best_supervised_model.pth"  
+    "Supervised Best": "best_supervised_model.pth"
+}
 
 # **5️⃣ Record the prediction results of all models**
 results = {"Depth": depths, "True Values": y_val.cpu().numpy().flatten()}
